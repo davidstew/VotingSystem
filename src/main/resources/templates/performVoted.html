@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+<div th:each="candidate : ${candidates}">
+Click to vote for:
+<a th:href="@{/voteFor(id=${candidate.id})}" th:text="${candidate.name}"> click </a>
+
+
+
+</div>
+
+</body>
+</html>
